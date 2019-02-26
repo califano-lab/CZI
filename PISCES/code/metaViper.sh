@@ -16,5 +16,5 @@ current_keep_settings=vpmat
 
 # run qsub metaVIPER
 
-bash /ifs/scratch/c2b2/ac_lab/atg2142/Fall_2018/QSUB_METAVIPER_SCRIPTS/atg_qsub_metaviper_wrapper.sh --test_samples=${current_test_samples} --ref_samples=${current_reference_samples} --regulon_list=${current_regulon_list} --per_num=${current_permutation_number} --norm_method=${current_normalization_method} --combine_method=${current_combination_method} --output_dir=${current_output_directory} --keep=${current_keep_settings} >> ${current_output_directory}/qsub_metaviper_logfile.txt
+bash QSUB_METAVIPER_SCRIPTS/atg_qsub_metaviper_wrapper.sh --test_samples=${current_test_samples} --ref_samples=${current_reference_samples} --regulon_list=${current_regulon_list} --per_num=${current_permutation_number} --norm_method=${current_normalization_method} --combine_method=${current_combination_method} --output_dir=${current_output_directory} --keep=${current_keep_settings} >> ${current_output_directory}/qsub_metaviper_logfile.txt
 

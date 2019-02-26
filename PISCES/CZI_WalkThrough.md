@@ -4,6 +4,11 @@ To get started, make sure you have the following R packages installed:
 stringr
 optparse
 viper
+umap
+pheatmap
+RColorBrewer
+biomaRt
+cluster
 
 You'll also need to install the following python libraries (using python 3):
 numpy
@@ -118,10 +123,21 @@ Finally, we run ARACNe on the meta cells from each cluster. Use whatever ARACNe
 You should then re-run metaVIPER with the networks generated from the metacells for each cell, producing a new protein activity matrix. Then, recluster the data using the same script as earlier in the pipeline (see step 3, 3.5, and 4 for walkthroughs on these steps).
 
 
-### STEP 8: Master Regulators ###
+### STEP 8: Recompute Protein Activity ###
 
-Finally, we want to find the master regulators for each cluster, using stouffer integration. 
+Now that we have cluster specific networks for the data, we will re-infer protein activity. Since these networks are more context specific, the protein activity we infer will be more accurate than in Step 3, allowing for biologically relevant clustering and analysis of master regulators. 
 
-Run the following command (for each cluster):
+First, you'll need to combine the networks from Step 7 into a single list object, then save that object as a .rds. Call the list of networks ```cluster-nets.rds```, then run the following command:
 
-```Rscript mrAnalysis.R --activity_file=cluster_proteinActivity.rds --out_name=cluster-name_MRs.txt --out_dir=YOUR-OUT-DIRECTORY```
+```bash metaViper.sh d1-lung_mergedCPM.rds d1-lung_mergedCPM.rds cluster-nets.rds d1-lung_cluster-net-viper```
+
+We will refer to this protein activity as ```r2```.
+
+
+### STEP 9: R2 Clustering ###
+
+We provide a script to perform PAM based clustering using Viper Similarity as a distance matrix over a range of k values. This will allow you to simultaneously generate multiple clusterings and analyze which one is optimal. Generate these clusterings with the following command:
+
+```Rscript r2-reClsut.R --input_file=d1-lung_cluster-net-viper.rds --out_name=d1-lung_r2-PAM-clust --out_dir=YOUR-OUT-DIRECTORY```
+
+By default, this script will generate clsuterings for k between 2 and 5. However, these can be changed with the ```kmin``` and ```kmax``` arguments. This script will also generate lists of master regulators for each clustering scheme.
