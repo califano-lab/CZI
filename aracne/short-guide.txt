@@ -1,0 +1,22 @@
+/ifs/scratch/c2b2/ac_lab/CZI/aracne-1.11/
+
+Assuming the following:
+ - the expression data you have is 'expMat.rds'
+ - the file with regulators is 'regFile.txt', and has one target per line in the same gene name convention as your expresison matrix
+
+Make sure you're working from a qlogin session (don't do things on the login node)
+
+Step 1: aracne-table-convert.R
+
+	Rscript aracne-table-convert.R --input_file=expMat.rds --out_file=expMat.tsv
+
+Step 2: aracne-java.sh
+
+	bash aracne-java.sh RUN_ID BASE_DIR regFile.txt expMat.tsv
+		RUN_ID should be an informative, short title of the job, ie 'd1-blood-TF'
+		BASE_DIR should be the directory you want the results to go to, ideally in your own directory on the cluster
+
+Step 3: regProcess-aracTable.R
+
+	Rscript regProcess-aracTable.R --a_file=ARACNE_RESULT --exp_file=expMat.tsv --out_dir=OUTPUT_DIRECTORY --out_name=OUT_NAME
+		ARACNE_RESULT will be a file in the final directory from your ARACNe run (assuming it ran correctly), with '4col' in the name.

@@ -1,0 +1,98 @@
+﻿Cell Type,Marker,Mode
+Fibroblasts,PDGFRA,1
+Fibroblasts,PDGFRB,1
+Fibroblasts,PTGDS,1
+Fibroblasts,LUM,1
+Fibroblasts,MMP2,1
+Neutrophils,CSF3R,1
+Neutrophils,S100A12,1
+Neutrophils,CEACAM3,1
+Neutrophils,FCAR,1
+Neutrophils,FCGR3B,1
+Neutrophils,FPR1,1
+Neutrophils,SIGLEC5,1
+Neutrophils,CXCR2,1
+Neutrophils,MPO,1
+Macrophage,CD163,1
+Macrophage,CD68,1
+Macrophage,CD84,1
+Macrophage,MS4A4A,1
+Macrophage,CD209,1
+Macrophage,CD93,1
+Macrophage,ITGAM,1
+Macrophage,CD86,1
+Mast Cells,MS4A2,1
+Mast Cells,TPSAB1,1
+Mast Cells,CPA3,1
+Mast Cells,HDC,1
+Mast Cells,TPSB2,1
+Plasma Cells,CD138,1
+Plasma Cells,CD38,1
+Plasma Cells,CD27,1
+Plasma Cells,SSR4,1
+Plasma Cells,FKBP2,1
+Plasma Cells,FKBP11,1
+Plasma Cells,HSP90B1,1
+Plasma Cells,SEC11C,1
+Plasma Cells,SDF2L1,1
+Plasma Cells,DERL3,1
+Plasma Cells,XBP1,1
+Plasma Cells,LGALS1,1
+B Cells,CD19,1
+B Cells,CR2,1
+B Cells,CXCR5,1
+B Cells,VPREB3,1
+B Cells,BLK,1
+B Cells,MS4A1,1
+B Cells,TNFRSF17,1
+B Cells,FCRL2,1
+B Cells,KIAA0125,1
+B Cells,PNOC,1
+B Cells,SPIB,1
+B Cells,TCL1A,1
+B Cells,CD20,1
+B Cells,CD79A,1
+B Cells,CD79B,1
+B Cells,BANK1,1
+T Cells,CD3D,1
+T Cells,CD3G,1
+T Cells,CD3E,1
+T Cells,CD6,1
+T Cells,SH2D1A,1
+T Cells,TRAT1,1
+T Cells,TRAC,1
+CD4_T-Cells,CD4,1
+CD4_T-Cells,SPG21,1
+CD4_T-Cells,CD8A,-1
+CD4_T-Cells,CD8B,-1
+CD8_T-Cells,CD4,-1
+CD8_T-Cells,SPG21,-1
+CD8_T-Cells,CD8A,1
+CD8_T-Cells,CD8B,1
+Monocytes,CD14,1
+Monocytes,CD1D,1
+T Cell Activation,CD69,1
+T Cell Activation,CCR7,1
+T Cell Activation,CD27,1
+T Cell Activation,BTLA,1
+T Cell Activation,CD40LG,1
+T Cell Activation,IL2RA,1
+T Cell Activation,CD3E,1
+T Cell Activation,CD47,1
+T Cell Activation,EOMES,1
+T Cell Activation,GNLY,1
+T Cell Activation,GZMA,1
+T Cell Activation,GZMB,1
+T Cell Activation,PRF1,1
+T Cell Activation,IFNG,1
+T Cell Activation,CD8A,1
+T Cell Activation,CD8B,1
+T Cell Activation,CD95L,1
+T Cell Activation,LAMP1,1
+T Cell Activation,LAG3,1
+T Cell Activation,CTLA4,1
+T Cell Activation,HLA-DRA,1
+T Cell Activation,TNFRSF4,1
+T Cell Activation,ICOS,1
+T Cell Activation,TNFRSF9,1
+T Cell Activation,TNFRSF18,1
